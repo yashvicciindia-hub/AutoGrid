@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AutoMandi — India's Automotive Business Network</title>
+<meta name="description" content="AutoMandi connects manufacturers, suppliers, OEMs, workshops and global trade through one intelligent B2B platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav" id="nav">
+  <div class="nav__inner container">
+    <a href="#home" class="nav__brand" data-route>
+      <span class="nav__mark">AM</span>
+      <span class="nav__name">AutoMandi</span>
+    </a>
+
+    <nav class="nav__links" id="navLinks">
+      <a href="#home" class="nav__link is-active" data-nav data-route>Home</a>
+      <a href="#platform" class="nav__link" data-nav data-route>Platform</a>
+      <a href="#business" class="nav__link" data-nav data-route>Business</a>
+      <a href="#contact" class="nav__link" data-nav data-route>Contact</a>
+      <a href="#contact" class="btn btn--primary btn--sm nav__cta-mobile" data-route>Join AutoMandi</a>
+    </nav>
+
+    <a href="#contact" class="btn btn--primary btn--sm nav__cta" data-route>Join AutoMandi</a>
+
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- =======================================================
+       PAGE: HOME
+  ======================================================= -->
+  <div class="page is-active" data-page="home" id="page-home">
+
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__dot"></span>B2B Automotive Parts Procurement</p>
+          <h1 class="hero__title">Automotive Parts<br>Procurement, Simplified.</h1>
+          <p class="hero__sub">AutoMandi connects businesses with a verified network of automotive parts suppliers — discover parts, compare suppliers and request quotes from one B2B platform.</p>
+          <div class="hero__actions">
+            <a href="#marketplace" class="btn btn--primary" data-route>Explore Marketplace</a>
+            <a href="#contact" class="btn btn--ghost" data-route>Become a Supplier</a>
+          </div>
+          <dl class="hero__stats">
+            <div><dt><span class="counter" data-count="420">0</span>+</dt><dd>Verified Suppliers</dd></div>
+            <div><dt><span class="counter" data-count="12500">0</span>+</dt><dd>Parts Listed</dd></div>
+            <div><dt><span class="counter" data-count="1800">0</span>+</dt><dd>Businesses Connected</dd></div>
+            <div><dt><span class="counter" data-count="65">0</span>+</dt><dd>Cities Covered</dd></div>
+          </dl>
+          <p class="hero__stats-note">Growing network across India’s automotive ecosystem.</p>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="app-frame">
+            <div class="app-frame__bar">
+              <span class="app-frame__dot"></span>
+              <span class="app-frame__dot"></span>
+              <span class="app-frame__dot"></span>
+              <span class="app-frame__url">app.automandi.com/search</span>
+            </div>
+            <div class="app-frame__body">
+              <div class="app-search">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <span>Front brake pad — Maruti Swift 2019</span>
+              </div>
+              <div class="app-row app-row--head">
+                <span>Part</span><span>OEM No.</span><span>Supplier</span><span>Status</span>
+              </div>
+              <div class="app-row">
+                <span>Brake Pad Set — Front</span>
+                <span class="mono">04465-B4</span>
+                <span>Kanika Auto Parts</span>
+                <span class="badge badge--verified">Verified</span>
+              </div>
+              <div class="app-row app-row--highlight">
+                <span>Brake Pad Set — Front</span>
+                <span class="mono">04465-B4</span>
+                <span>Shree Auto Traders</span>
+                <span class="badge badge--verified">Verified</span>
+              </div>
+              <div class="app-row">
+                <span>Brake Pad Set — Front</span>
+                <span class="mono">04465-B4</span>
+                <span>NCR Spares Co.</span>
+                <span class="badge badge--stock">3 in stock</span>
+              </div>
+              <div class="app-ai">
+                <span class="app-ai__icon">✦</span>
+                <div>
+                  <p class="app-ai__label">AI Recommendation</p>
+                  <p class="app-ai__text">Shree Auto Traders has the fastest dispatch time and 98% order accuracy for this part.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container trust__row">
+        <span>AI-Powered Procurement</span>
+        <span>Verified Business Network</span>
+        <span>Supplier Discovery</span>
+        <span>Inventory Intelligence</span>
+        <span>Global Trade</span>
+      </div>
+    </section>
+
+    <section class="section problem" id="problem">
+      <div class="container problem__grid">
+        <div class="problem__text reveal">
+          <p class="kicker">The Challenge</p>
+          <h2 class="section__title">The automotive supply chain is still fragmented</h2>
+          <ul class="problem__list">
+            <li><span>Manual supplier discovery</span>Sourcing still runs on phone calls, referrals and outdated directories.</li>
+            <li><span>Scattered inventory</span>No shared view of what stock actually exists across the network.</li>
+            <li><span>Slow procurement</span>Multi-day cycles for parts that should take minutes to locate.</li>
+            <li><span>Limited visibility</span>Buyers can't verify a supplier's reliability before committing.</li>
+            <li><span>Complex trade processes</span>Cross-border documentation adds friction to every export deal.</li>
+          </ul>
+        </div>
+        <div class="problem__visual reveal">
+          <div class="flow">
+            <div class="flow__node flow__node--muted">Fragmented Processes</div>
+            <div class="flow__arrow">↓</div>
+            <div class="flow__node flow__node--accent">AutoMandi</div>
+            <div class="flow__arrow">↓</div>
+            <div class="flow__node flow__node--dark">Connected Automotive Network</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt how" id="how">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="kicker">How AutoMandi Works</p>
+          <h2 class="section__title">From onboarding to fulfilment</h2>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline__step">
+            <span class="timeline__index">01</span>
+            <h3>Onboard</h3>
+            <p>Businesses join the network and complete verification.</p>
+          </div>
+          <div class="timeline__step">
+            <span class="timeline__index">02</span>
+            <h3>Discover</h3>
+            <p>Find parts, suppliers and opportunities across the network.</p>
+          </div>
+          <div class="timeline__step">
+            <span class="timeline__index">03</span>
+            <h3>Transact</h3>
+            <p>Connect directly with counterparties and conduct business.</p>
+          </div>
+          <div class="timeline__step">
+            <span class="timeline__index">04</span>
+            <h3>Fulfill</h3>
+            <p>Complete the transaction and generate network intelligence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- =======================================================
+       PAGE: PLATFORM
+  ======================================================= -->
+  <div class="page" data-page="platform" id="page-platform">
+
+    <section class="section platform" id="platform">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="kicker">The Platform</p>
+          <h2 class="section__title">One platform. Multiple automotive workflows.</h2>
+        </div>
+
+        <div class="bento reveal">
+          <a href="#ai-parts" class="bento__item bento__item--feature" data-route>
+            <span class="bento__tag">Featured</span>
+            <h3>AI Parts Assistant</h3>
+            <p>Identify the right part instantly from an image, VIN or part number, then match it to verified suppliers.</p>
+            <span class="bento__link">Open assistant →</span>
+          </a>
+          <div class="bento__item">
+            <h3>B2B Marketplace</h3>
+            <p>Search and transact across a verified network of parts suppliers nationwide.</p>
+          </div>
+          <div class="bento__item">
+            <h3>AI Business Advisor</h3>
+            <p>Ask sourcing, trade and pricing questions and get network-informed answers.</p>
+          </div>
+          <div class="bento__item">
+            <h3>OEM Supplier Discovery</h3>
+            <p>Manufacturers find qualified, compliant suppliers for new production lines.</p>
+          </div>
+          <div class="bento__item">
+            <h3>Inventory Exchange</h3>
+            <p>Surface surplus and slow-moving stock to buyers who need it now.</p>
+          </div>
+          <div class="bento__item">
+            <h3>Trade Documentation</h3>
+            <p>Standardised export paperwork that keeps cross-border deals moving.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt ai-parts" id="ai-parts">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="kicker">AI Parts Assistant</p>
+          <h2 class="section__title">Find the right automotive part</h2>
+
+        </div>
+
+        <div class="ai-parts__panel reveal">
+          <div class="ai-parts__tabs" role="tablist">
+            <button class="ai-parts__tab is-active" data-tab="image" role="tab" aria-selected="true">Image</button>
+            <button class="ai-parts__tab" data-tab="vin" role="tab" aria-selected="false">VIN</button>
+            <button class="ai-parts__tab" data-tab="part" role="tab" aria-selected="false">Part Number</button>
+          </div>
+
+          <div class="ai-parts__body">
+            <div class="ai-parts__pane is-active" data-pane="image">
+              <label class="upload" for="partImage">
+                <input type="file" id="partImage" accept="image/*" hidden>
+                <div class="upload__hint" id="uploadHint">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 16V4m0 0L7 9m5-5l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                  <span>Click to upload a photo of the part</span>
+                  <small>PNG or JPG, up to 10MB</small>
+                </div>
+                <div class="upload__preview" id="uploadPreview" hidden>
+                  <img id="uploadPreviewImg" alt="Uploaded part preview">
+                  <span id="uploadFilename" class="mono"></span>
+                </div>
+              </label>
+            </div>
+
+            <div class="ai-parts__pane" data-pane="vin">
+              <label class="field">
+                <span class="field__label">Vehicle Identification Number</span>
+                <input type="text" id="vinInput" class="field__input mono" placeholder="e.g. MA3ERLF1S00123456" maxlength="17">
+                <span class="field__hint" id="vinHint">17 characters, letters and numbers only.</span>
+              </label>
+            </div>
+
+            <div class="ai-parts__pane" data-pane="part">
+              <label class="field">
+                <span class="field__label">OEM Part Number</span>
+                <input type="text" id="partInput" class="field__input mono" placeholder="e.g. 04465-B4030">
+                <span class="field__hint" id="partHint">Enter the OEM number printed on the part or invoice.</span>
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn--primary ai-parts__submit" id="identifyBtn">Identify Part</button>
+
+          <div class="ai-parts__result" id="aiResult" hidden>
+            <div class="ai-progress" id="aiProgress">
+              <div class="ai-progress__step" data-step="1"><span class="ai-progress__dot"></span>Analyzing</div>
+              <div class="ai-progress__step" data-step="2"><span class="ai-progress__dot"></span>Matching</div>
+              <div class="ai-progress__step" data-step="3"><span class="ai-progress__dot"></span>Finding Suppliers</div>
+            </div>
+            <div class="ai-result-card" id="aiResultCard" hidden>
+              <div class="ai-result-card__head">
+                <h4 id="resultPartName">Front Brake Pad Set</h4>
+      
+              </div>
+              <div class="ai-result-card__grid">
+                <div><span class="label">Compatibility</span><p id="resultCompat">Maruti Swift 2018–2021</p></div>
+                <div><span class="label">Suppliers found</span><p id="resultSuppliers">14 verified suppliers</p></div>
+                <div><span class="label">Availability</span><p id="resultAvailability">In stock — ships in 1–2 days</p></div>
+                <div><span class="label">Price range</span><p id="resultPrice">₹1,450 – ₹2,100</p></div>
+              </div>
+              <a href="#marketplace" class="ai-result-card__cta" data-route>View matching suppliers →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section marketplace" id="marketplace">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="kicker">B2B Marketplace</p>
+          <h2 class="section__title">Search the verified supplier network</h2>
+        </div>
+
+        <div class="marketplace__panel reveal">
+          <div class="marketplace__search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <input type="text" id="marketSearch" placeholder="Search automotive parts, OEM numbers or suppliers">
+          </div>
+
+          <div class="marketplace__filters">
+            <select id="filterCategory"><option value="">Category</option></select>
+            <select id="filterVehicle"><option value="">Vehicle</option></select>
+            <select id="filterOEM"><option value="">OEM</option></select>
+            <select id="filterLocation"><option value="">Location</option></select>
+            <button class="marketplace__reset" id="marketReset" type="button">Reset</button>
+          </div>
+
+          <div class="marketplace__table">
+            <div class="marketplace__row marketplace__row--head">
+              <span>Part</span><span>OEM No.</span><span>Compatibility</span><span>Supplier</span><span>Location</span><span>Price</span><span>Action</span>
+            </div>
+            <div id="marketplaceResults"></div>
+            <p class="marketplace__empty" id="marketEmpty" hidden>No parts match your search. Try adjusting the filters.</p>
+          </div>
+          <p class="marketplace__note">Supplier listings are shown with verification and availability details to help buyers compare options.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- =======================================================
+       PAGE: BUSINESS
+  ======================================================= -->
+  <div class="page" data-page="business" id="page-business">
+
+    <section class="section business" id="business">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="kicker">Business Solutions</p>
+          <h2 class="section__title">Built for the automotive ecosystem</h2>
+        </div>
+
+        <div class="solutions reveal">
+          <div class="solutions__tabs">
+            <button class="solutions__tab is-active" data-solution="manufacturers">Manufacturers</button>
+            <button class="solutions__tab" data-solution="oems">OEMs</button>
+            <button class="solutions__tab" data-solution="suppliers">Suppliers</button>
+            <button class="solutions__tab" data-solution="workshops">Workshops</button>
+            <button class="solutions__tab" data-solution="exporters">Exporters</button>
+          </div>
+
+          <div class="solutions__panel" id="solutionsPanel">
+            <div class="solutions__col">
+              <span class="label">Challenge</span>
+              <p id="solutionChallenge"></p>
+            </div>
+            <div class="solutions__col">
+              <span class="label">AutoMandi Solution</span>
+              <p id="solutionSolution"></p>
+            </div>
+            <div class="solutions__col">
+              <span class="label">Business Benefit</span>
+              <p id="solutionBenefit"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt advisor" id="advisor">
+      <div class="container advisor__grid">
+        <div class="reveal">
+          <p class="kicker">AI Business Advisor</p>
+          <h2 class="section__title">Ask about sourcing, trade or pricing</h2>
+          <p class="section__sub">A network-aware assistant that helps businesses make faster procurement and trade decisions. Try asking about suppliers, sourcing, export or pricing.</p>
+        </div>
+
+        <div class="chat reveal">
+          <div class="chat__head">
+            <span>AI Business Advisor</span>
+
+          </div>
+          <div class="chat__body" id="chatBody">
+            <div class="chat__msg chat__msg--bot">Hi, I'm the AutoMandi Business Advisor. Ask me about suppliers, sourcing, export or pricing.</div>
+          </div>
+          <form class="chat__form" id="chatForm">
+            <input type="text" id="chatInput" placeholder="Ask a question…" autocomplete="off">
+            <button type="submit" class="btn btn--primary btn--sm">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section value" id="value">
+      <div class="container">
+        <div class="section__head reveal">
+          <p class="kicker">Business Value</p>
+          <h2 class="section__title">Why businesses use AutoMandi</h2>
+        </div>
+        <div class="value__grid reveal">
+          <div class="value__item"><h3>Faster supplier discovery</h3><p>Locate qualified, verified suppliers in minutes instead of days.</p></div>
+          <div class="value__item"><h3>Smarter procurement</h3><p>AI-assisted matching reduces sourcing errors and delays.</p></div>
+          <div class="value__item"><h3>Better inventory visibility</h3><p>See real availability across the network before you commit.</p></div>
+          <div class="value__item"><h3>Connected automotive businesses</h3><p>One network linking manufacturers, suppliers and workshops.</p></div>
+          <div class="value__item"><h3>Simplified trade workflows</h3><p>Standardised documentation for smoother cross-border deals.</p></div>
+          <div class="value__item"><h3>AI-assisted decision making</h3><p>Get sourcing and pricing guidance grounded in network data.</p></div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- =======================================================
+       PAGE: CONTACT
+  ======================================================= -->
+  <div class="page" data-page="contact" id="page-contact">
+
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+        <div class="reveal">
+          <p class="kicker">Contact</p>
+          <h2 class="section__title">Bring your business to AutoMandi</h2>
+          <p class="section__sub">Tell us about your business and a member of our team will follow up to help you get set up on the network.</p>
+        </div>
+
+        <div class="contact__panel form reveal">
+          <div class="contact__panel-badge"><span>●</span> B2B SUPPORT DESK</div>
+          <h3>Connect with the AutoMandi team</h3>
+          <p>Choose the route that matches your requirement. The relevant Google Form will open in a new tab.</p>
+          <div class="contact__actions">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdouCJSL3ypVgYp3aftoDFlniSaLovbVnVL8qvItSDJd0Vtsw/viewform?usp=publish-editor" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Contact Us <span>↗</span></a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdwSpXUTnxuQ2tJ4U9II-8gjTX69G_yfNGz_lOZwkFrctWrFQ/viewform?usp=publish-editor" class="btn btn--ghost" target="_blank" rel="noopener noreferrer">Become a Supplier <span>↗</span></a>
+          </div>
+          <div class="contact__trust">
+            <div><strong>01</strong><span>Business enquiries</span></div>
+            <div><strong>02</strong><span>Supplier onboarding</span></div>
+            <div><strong>03</strong><span>Procurement support</span></div>
+          </div>
+          <p class="contact__form-note">Forms open securely in a new tab. Choose the option that matches your requirement.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ================= PERSISTENT FINAL CTA (hidden on Contact page) ================= -->
+  <section class="cta" id="globalCta">
+    <div class="container cta__inner">
+      <h2>Build the future of automotive commerce</h2>
+      <p>Connect. Discover. Transact. Grow.</p>
+      <a href="#contact" class="btn btn--primary" data-route>Join AutoMandi</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <div class="nav__brand">
+        <span class="nav__mark">AM</span>
+        <span class="nav__name">AutoMandi</span>
+      </div>
+      <p class="footer__tagline">Connecting manufacturers, suppliers, OEMs, workshops and global trade through one intelligent business platform.</p>
+    </div>
+
+    <nav class="footer__col" aria-label="Platform">
+      <span class="footer__heading">Platform</span>
+      <a href="#platform" data-route>Overview</a>
+      <a href="#ai-parts" data-route>AI Parts Assistant</a>
+      <a href="#marketplace" data-route>B2B Marketplace</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Business">
+      <span class="footer__heading">Business</span>
+      <a href="#business" data-route>Solutions</a>
+      <a href="#advisor" data-route>AI Business Advisor</a>
+      <a href="#value" data-route>Why AutoMandi</a>
+    </nav>
+
+    <nav class="footer__col" aria-label="Company">
+      <span class="footer__heading">Company</span>
+      <a href="#home" data-route>Home</a>
+      <a href="#contact" data-route>Contact</a>
+      <a href="#contact" data-route>Join AutoMandi</a>
+    </nav>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>© 2026 AutoMandi. India's automotive business network.</p>
+    <p>Built for faster, smarter automotive business.</p>
+  </div>
+</footer>
+
+<!-- ================= MARKETPLACE DETAIL MODAL ================= -->
+<div class="modal" id="detailModal" hidden>
+  <div class="modal__backdrop" data-close></div>
+  <div class="modal__panel" role="dialog" aria-modal="true">
+    <button class="modal__close" data-close aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
