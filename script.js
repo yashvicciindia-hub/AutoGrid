@@ -5,7 +5,7 @@
      GOOGLE FORM DESTINATIONS
   ========================================================= */
   const QUOTE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdBYqTzNuOrIPv5jkhnpMmfgRrKrmWxtszgaIX2TeI4FVBtFw/viewform?usp=publish-editor";
-  const JOIN_AUTOMANDI_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSegbOkXB6QRvTeZvFgxyTrfp27Tvb7FY0V7vvwJsLJ-W52zGA/viewform?usp=dialog";
+  const JOIN_AUTOGRID_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSegbOkXB6QRvTeZvFgxyTrfp27Tvb7FY0V7vvwJsLJ-W52zGA/viewform?usp=dialog";
   const SUPPLIER_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdwSpXUTnxuQ2tJ4U9II-8gjTX69G_yfNGz_lOZwkFrctWrFQ/viewform?usp=publish-editor";
   const CONTACT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdouCJSL3ypVgYp3aftoDFlniSaLovbVnVL8qvItSDJd0Vtsw/viewform?usp=publish-editor";
   const PROCUREMENT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfxZyl12MmEf0eQtQs8t19yuV939IE3cmdiX-Jou04s1v8w2g/viewform?usp=publish-editor";
@@ -74,8 +74,8 @@
     if (globalCta) globalCta.hidden = pageId === "contact";
     setActiveNav(pageId);
     document.title = pageId === "home"
-      ? "AutoMandi — India's Automotive Business Network"
-      : "AutoMandi — " + pageId.charAt(0).toUpperCase() + pageId.slice(1);
+      ? "AutoGrid — India's Automotive Business Network"
+      : "AutoGrid — " + pageId.charAt(0).toUpperCase() + pageId.slice(1);
   }
 
   function navigate(rawHash, isInitial) {
@@ -688,7 +688,7 @@
   const solutionsData = {
     manufacturers: {
       challenge: "Finding compliant, reliable component suppliers for new production lines takes months of manual vetting.",
-      solution: "AutoMandi surfaces pre-verified suppliers matched to your specifications, capacity and compliance needs.",
+      solution: "AutoGrid surfaces pre-verified suppliers matched to your specifications, capacity and compliance needs.",
       benefit: "Cut supplier qualification time and reduce production line risk.",
     },
     oems: {
@@ -698,7 +698,7 @@
     },
     suppliers: {
       challenge: "Reaching new B2B buyers beyond an existing network relies on referrals and trade shows.",
-      solution: "A verified storefront on AutoMandi puts your inventory in front of manufacturers, OEMs and workshops actively sourcing.",
+      solution: "A verified storefront on AutoGrid puts your inventory in front of manufacturers, OEMs and workshops actively sourcing.",
       benefit: "New demand channels and higher-quality inbound leads.",
     },
     workshops: {
@@ -746,10 +746,10 @@
   const chatBody = document.getElementById("chatBody");
 
   const advisorResponses = [
-    { keys: ["supplier", "suppliers"], reply: "AutoMandi verifies suppliers on business registration, trade history and delivery reliability. You can filter the marketplace by category, vehicle, OEM number or location to shortlist matches." },
+    { keys: ["supplier", "suppliers"], reply: "AutoGrid verifies suppliers on business registration, trade history and delivery reliability. You can filter the marketplace by category, vehicle, OEM number or location to shortlist matches." },
     { keys: ["sourcing", "source", "procure", "procurement"], reply: "For sourcing, start with the AI Parts Assistant — upload a photo, VIN or part number and it will match verified suppliers with live availability and pricing." },
-    { keys: ["export", "trade", "international", "customs"], reply: "AutoMandi's trade documentation tools standardise export paperwork and connect you with verified international buyers, which typically shortens deal cycles." },
-    { keys: ["price", "pricing", "cost", "cheap"], reply: "Pricing on AutoMandi is shown as a range sourced from multiple verified suppliers, so you can compare before committing. Prices vary by location, order volume and stock availability." },
+    { keys: ["export", "trade", "international", "customs"], reply: "AutoGrid's trade documentation tools standardise export paperwork and connect you with verified international buyers, which typically shortens deal cycles." },
+    { keys: ["price", "pricing", "cost", "cheap"], reply: "Pricing on AutoGrid is shown as a range sourced from multiple verified suppliers, so you can compare before committing. Prices vary by location, order volume and stock availability." },
   ];
   const fallbackReply = "That's a good question for our team — you can reach out through the contact form below and a specialist will follow up. In the meantime, try asking about suppliers, sourcing, export or pricing.";
 
@@ -789,25 +789,25 @@
   });
 
   /* =========================================================
-     JOIN AUTOMANDI
-     Join AutoMandi uses its own form and opens a dedicated dialog.
+    JOIN AUTOGRID
+    Join AutoGrid uses its own form and opens a dedicated dialog.
      Contact continues to use the dedicated Contact page.
   ========================================================= */
   function showJoinDialog() {
     modalBody.innerHTML = `
-      ${modalShell("Join AutoMandi", "JOIN AUTOMANDI")}
+      ${modalShell("Join AutoGrid", "JOIN AUTOGRID")}
       <div class="external-form-dialog">
         <div class="external-form-dialog__icon">＋</div>
         <div>
-          <h3>Join the AutoMandi network</h3>
-          <p>Complete the Join AutoMandi form to share your details and connect with the automotive business network.</p>
+          <h3>Join the AutoGrid network</h3>
+          <p>Complete the Join AutoGrid form to share your details and connect with the automotive business network.</p>
         </div>
         <div class="external-form-dialog__benefits">
           <div><strong>01</strong><span>Your details</span></div>
           <div><strong>02</strong><span>Business information</span></div>
           <div><strong>03</strong><span>Network registration</span></div>
         </div>
-        <p class="external-form-dialog__note">The Join AutoMandi form will open in a new tab.</p>
+        <p class="external-form-dialog__note">The Join AutoGrid form will open in a new tab.</p>
         <div class="procurement-actions">
           <button type="button" class="btn btn--ghost" data-close>Close</button>
           <button type="button" class="btn btn--primary" id="openJoinFormBtn">Open Join Form ↗</button>
@@ -816,14 +816,14 @@
     `;
 
     document.getElementById("openJoinFormBtn")?.addEventListener("click", () => {
-      openExternalForm(JOIN_AUTOMANDI_FORM_URL);
+      openExternalForm(JOIN_AUTOGRID_FORM_URL);
     });
   }
 
-  // Intercept only the Join AutoMandi CTAs. Contact remains a normal
+  // Intercept only the Join AutoGrid CTAs. Contact remains a normal
   // route to the dedicated Contact page.
   document.querySelectorAll('a[href="#contact"]').forEach((link) => {
-    if (!/join automandi/i.test(link.textContent || "")) return;
+    if (!/join autogrid/i.test(link.textContent || "")) return;
 
     link.addEventListener("click", (e) => {
       e.preventDefault();
