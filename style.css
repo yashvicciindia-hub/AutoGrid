@@ -956,6 +956,125 @@ textarea.field__input { resize: vertical; }
   .external-form-dialog .procurement-actions .btn { width: 100%; }
 }
 
+/* =========================================================
+   PHONE AND TABLET POLISH
+========================================================= */
+@media (max-width: 1024px) {
+  :root { --container: 100%; }
+  .container { padding-left: 28px; padding-right: 28px; }
+  .nav__links { gap: 22px; }
+  .hero__grid { gap: 40px; }
+  .hero__title { font-size: clamp(2.25rem, 5vw, 3.2rem); }
+  .app-frame__body { padding: 16px; }
+  .section { padding-top: 92px; padding-bottom: 92px; }
+}
+
+@media (max-width: 900px) {
+  .nav__inner { height: 68px; }
+  .brand-logo { width: 148px; height: 44px; }
+  .brand-logo--footer { width: 176px; height: 52px; }
+  .nav__links { top: 68px; }
+  .hero__grid { grid-template-columns: 1fr; }
+  .hero__visual { order: 0; max-width: 720px; width: 100%; margin: 0 auto; }
+  .problem__grid, .advisor__grid, .contact__grid { gap: 44px; }
+  .marketplace__panel { padding: 22px; }
+  .marketplace__filters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .marketplace__filters select, .marketplace__reset { width: 100%; min-height: 42px; }
+  .marketplace__table { overflow-x: auto; }
+  .marketplace__row { min-width: 700px; }
+  .marketplace__row span:nth-child(3), .marketplace__row span:nth-child(5),
+  .marketplace__row--head span:nth-child(3), .marketplace__row--head span:nth-child(5) { display: none; }
+  .marketplace__row { grid-template-columns: 1.7fr 1fr 1.25fr .95fr .9fr; min-width: 0; }
+  .marketplace__row span:nth-child(1) { grid-column: span 2; }
+  .marketplace__row span:nth-child(4) { grid-column: span 2; }
+}
+
+@media (max-width: 600px) {
+  .container { padding-left: 18px; padding-right: 18px; }
+  .section { padding-top: 68px; padding-bottom: 68px; }
+  .nav__inner { padding-left: 18px; padding-right: 12px; }
+  .brand-logo { width: 132px; height: 40px; }
+  .brand-logo--footer { width: 164px; height: 48px; }
+  .hero { padding-top: 34px; }
+  .hero__title { font-size: clamp(2rem, 10vw, 2.65rem); }
+  .hero__sub { font-size: 1rem; }
+  .hero__actions { flex-direction: column; align-items: stretch; }
+  .hero__actions .btn { width: 100%; }
+  .hero__stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 12px; margin-top: 36px; }
+  .hero__stats dt { font-size: 1.2rem; }
+  .hero__stats dd { font-size: .78rem; }
+  .app-frame__url { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .app-row { font-size: .72rem; }
+  .trust__row { font-size: .68rem; }
+  .section__head { margin-bottom: 36px; }
+  .section__title { font-size: 1.85rem; }
+  .marketplace__panel, .ai-parts__panel { padding: 16px; }
+  .marketplace__filters { grid-template-columns: 1fr; }
+  .marketplace__table { overflow: visible; border: 0; }
+  .marketplace__row { min-width: 0; grid-template-columns: 1fr auto; gap: 5px 12px; padding: 14px 0; border: 1px solid var(--slate-200); border-radius: var(--radius-sm); margin-bottom: 8px; }
+  .marketplace__row--head { display: none; }
+  .marketplace__row span { display: none !important; }
+  .marketplace__row span:nth-child(1), .marketplace__row span:nth-child(2),
+  .marketplace__row span:nth-child(6), .marketplace__row span:nth-child(7) { display: block !important; }
+  .marketplace__row span:nth-child(1) { grid-column: 1; }
+  .marketplace__row span:nth-child(2) { grid-column: 1; color: var(--slate-500); font-size: .72rem; }
+  .marketplace__row span:nth-child(6) { grid-column: 2; grid-row: 1 / span 2; align-self: center; text-align: right; }
+  .marketplace__row span:nth-child(7) { grid-column: 1 / -1; margin-top: 5px; }
+  .marketplace__action, .marketplace__action .btn { width: 100%; text-align: center; }
+  .marketplace__note { text-align: left; }
+  .procurement-section, .procurement-modal__head, .procurement-actions { padding-left: 18px; padding-right: 18px; }
+  .procurement-modal__head { padding-top: 20px; }
+  .procurement-modal__head h2 { font-size: 1.3rem; padding-right: 12px; }
+  .procurement-actions { flex-direction: column; }
+  .procurement-actions .btn { width: 100%; }
+  .confirmation-card { margin-left: 18px; margin-right: 18px; }
+  .external-form-dialog { padding-left: 18px; padding-right: 18px; }
+  .footer__grid { gap: 28px; }
+}
+
+@media (max-width: 900px) {
+  .nav__toggle {
+    position: relative;
+    z-index: 120;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-left: auto;
+    padding: 10px;
+    border: 1px solid var(--slate-200);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    transition: border-color .2s var(--ease), background .2s var(--ease), box-shadow .2s var(--ease);
+  }
+  .nav__toggle:hover, .nav__toggle.is-open {
+    border-color: var(--accent);
+    background: var(--accent-soft-2);
+    box-shadow: var(--shadow-sm);
+  }
+  .nav__toggle span { width: 19px; height: 2px; }
+  .nav__links {
+    z-index: 110;
+    top: 68px;
+    bottom: auto;
+    left: 12px;
+    right: 12px;
+    max-height: calc(100vh - 84px);
+    padding: 20px 24px 36px;
+    border-top: 1px solid var(--slate-200);
+    border: 1px solid var(--slate-200);
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    box-shadow: 0 18px 30px rgba(16, 21, 31, .12);
+  }
+  .nav__links.is-open { opacity: 1 !important; transform: translateY(0); pointer-events: auto; }
+  body.menu-is-open { overflow: hidden; }
+}
+
+@media (max-width: 600px) {
+  .nav__links { left: 8px; right: 8px; padding-left: 18px; padding-right: 18px; }
+}
+
 
 /* =========================================================
    POLISHED AI PARTS ASSISTANT

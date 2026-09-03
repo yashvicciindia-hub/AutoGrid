@@ -29,18 +29,31 @@
     nav.classList.toggle("is-scrolled", window.scrollY > 8);
   }, { passive: true });
 
-  navToggle.addEventListener("click", () => {
-    const isOpen = navLinks.classList.toggle("is-open");
+  function setMenuOpen(isOpen) {
+    navLinks.classList.toggle("is-open", isOpen);
     navToggle.classList.toggle("is-open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("menu-is-open", isOpen);
+  }
+
+  navToggle.addEventListener("click", () => {
+    setMenuOpen(!navLinks.classList.contains("is-open"));
   });
 
   navLinks.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
-      navLinks.classList.remove("is-open");
-      navToggle.classList.remove("is-open");
-      navToggle.setAttribute("aria-expanded", "false");
+      setMenuOpen(false);
     });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (navLinks.classList.contains("is-open") && !nav.contains(event.target)) setMenuOpen(false);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && navLinks.classList.contains("is-open")) {
+      setMenuOpen(false);
+      navToggle.focus();
+    }
   });
 
   /* =========================================================
