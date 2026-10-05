@@ -1923,3 +1923,163 @@ h1, h2, h3, h4 { letter-spacing: -.035em; }
   .ag-bot__pulse { animation: none; }
   .ag-bot__panel { animation: none; }
 }
+
+/* =========================================================
+   AUTOGRID APP DOWNLOAD CTA — GLOBAL FLOATING BUTTON
+   Positioned above the AutoGrid Assistant chatbot.
+   Desktop: right: 24px, bottom: 104px (chatbot 24+62+18=104)
+   Mobile:  right: 16px, bottom: 90px  (chatbot 16+56+18=90)
+========================================================= */
+
+.autogrid-app-download {
+  /* Layout / Positioning */
+  position: fixed;
+  right: 24px;
+  bottom: 104px;
+  z-index: 160; /* Below modals (200) & chatbot (180), above page content */
+
+  /* Sizing — compact pill, right-anchored */
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0;
+  height: 48px;
+  min-width: 48px;
+  max-width: 48px;        /* collapsed: icon-only */
+  overflow: hidden;
+
+  /* Appearance — AutoGrid navy/dark theme */
+  background: var(--navy-950, #0b1b31);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  box-shadow:
+    0 8px 24px rgba(10, 15, 26, 0.28),
+    0 0 0 6px rgba(16, 25, 41, 0.06);
+  text-decoration: none;
+
+  /* Transition — 240ms matching chatbot timing */
+  transition:
+    max-width 240ms cubic-bezier(.2, .8, .2, 1),
+    box-shadow 240ms cubic-bezier(.2, .8, .2, 1),
+    transform 240ms cubic-bezier(.2, .8, .2, 1),
+    background 240ms cubic-bezier(.2, .8, .2, 1);
+
+  white-space: nowrap;
+}
+
+/* Hover: expand leftward to reveal label */
+.autogrid-app-download:hover {
+  max-width: 186px;
+  box-shadow:
+    0 12px 32px rgba(10, 15, 26, 0.38),
+    0 0 0 8px rgba(16, 25, 41, 0.09);
+  transform: translateY(-2px);
+  background: var(--navy-800, #1c395c);
+  gap: 8px;
+}
+
+/* Focus — keyboard accessible */
+.autogrid-app-download:focus-visible {
+  outline: 2px solid var(--color-primary, #0b63ce);
+  outline-offset: 3px;
+}
+
+.autogrid-app-download:active {
+  transform: translateY(0);
+  box-shadow:
+    0 6px 18px rgba(10, 15, 26, 0.22),
+    0 0 0 6px rgba(16, 25, 41, 0.06);
+}
+
+/* Icon container — always visible, fixed 48x48 */
+.autogrid-app-download__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  color: #fff;
+}
+
+.autogrid-app-download__icon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+/* Label — hidden in collapsed state, revealed on hover */
+.autogrid-app-download__label {
+  font-family: var(--font-body, 'IBM Plex Sans', sans-serif);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: #fff;
+  padding-right: 18px;
+  opacity: 0;
+  transform: translateX(6px);
+  transition:
+    opacity 200ms cubic-bezier(.2, .8, .2, 1) 40ms,
+    transform 220ms cubic-bezier(.2, .8, .2, 1) 40ms;
+  pointer-events: none;
+}
+
+.autogrid-app-download:hover .autogrid-app-download__label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ── Mobile (<640px): always compact, 48px touch target ── */
+@media (max-width: 640px) {
+  .autogrid-app-download {
+    right: max(16px, env(safe-area-inset-right));
+    bottom: 90px; /* chatbot: 16 + 56 + 18 */
+    height: 48px;
+    min-width: 48px;
+    max-width: 48px;
+  }
+
+  /* No expand on touch — suppress hover expansion */
+  .autogrid-app-download:hover {
+    max-width: 48px;
+    gap: 0;
+    transform: none;
+    background: var(--navy-950, #0b1b31);
+    box-shadow:
+      0 8px 24px rgba(10, 15, 26, 0.28),
+      0 0 0 6px rgba(16, 25, 41, 0.06);
+  }
+
+  .autogrid-app-download:hover .autogrid-app-download__label {
+    opacity: 0;
+    transform: translateX(6px);
+  }
+
+  .autogrid-app-download:active {
+    transform: scale(0.94);
+    box-shadow:
+      0 4px 14px rgba(10, 15, 26, 0.22),
+      0 0 0 6px rgba(16, 25, 41, 0.06);
+  }
+}
+
+/* ── Tablet (641–900px) ── */
+@media (min-width: 641px) and (max-width: 900px) {
+  .autogrid-app-download {
+    right: 20px;
+    bottom: 104px;
+  }
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .autogrid-app-download,
+  .autogrid-app-download__label {
+    transition: none !important;
+  }
+  .autogrid-app-download:hover {
+    transform: none;
+  }
+}
